@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TutorialBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+376905be77e6c60c441bf3053632d488930f1798")]
 [assembly: System.Reflection.AssemblyProductAttribute("TutorialBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TutorialBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

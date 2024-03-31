@@ -4,7 +4,6 @@ C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\Tuto
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\TutorialBot.AssemblyInfo.cs
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\TutorialBot.csproj.CoreCompileInputs.cache
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\TutorialBot.exe
-C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\config.json
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\TutorialBot.deps.json
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\TutorialBot.runtimeconfig.json
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\TutorialBot.dll
@@ -30,3 +29,5 @@ C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\refi
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\TutorialBot.pdb
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\TutorialBot.genruntimeconfig.cache
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\ref\TutorialBot.dll
+C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Debug\net8.0\TutorialBot.sourcelink.json
+C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\bin\Debug\net8.0\config.json

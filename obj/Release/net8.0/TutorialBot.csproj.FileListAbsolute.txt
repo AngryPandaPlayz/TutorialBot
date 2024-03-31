@@ -30,3 +30,4 @@ C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Release\net8.0\re
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Release\net8.0\TutorialBot.pdb
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Release\net8.0\TutorialBot.genruntimeconfig.cache
 C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Release\net8.0\ref\TutorialBot.dll
+C:\Users\KingA\Desktop\TutorialBot\TutorialBot\TutorialBot\obj\Release\net8.0\TutorialBot.sourcelink.json

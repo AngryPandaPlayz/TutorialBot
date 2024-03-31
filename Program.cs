@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
 using DSharpPlus.SlashCommands;
+using TutorialBot.Commands.Prefix;
 using TutorialBot.ConfigHandler;
 
 namespace TutorialBot
@@ -35,13 +36,15 @@ namespace TutorialBot
          
             var commandsConfiguration = new CommandsNextConfiguration
             {
-                StringPrefixes = new string[] { config.DiscordBotPrefix },
+                StringPrefixes = new string[] { $"{config.DiscordBotPrefix}" },
                 EnableDms = false,
                 EnableMentionPrefix = true,
                 EnableDefaultHelp = false
             };
 
             commands = client.UseCommandsNext(commandsConfiguration);
+
+            commands.RegisterCommands<Fun>();
 
             slash = client.UseSlashCommands();
 
