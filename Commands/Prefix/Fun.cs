@@ -13,6 +13,8 @@ namespace TutorialBot.Commands.Prefix
     public sealed class Fun : BaseCommandModule
     {
         [Command("ping")]
+        [RequireGuild]
+        [Cooldown(1, 5, CooldownBucketType.User)]
         public async Task Ping(CommandContext ctx, string? type = null)
         {
             //Set type to null if the type is empty.
