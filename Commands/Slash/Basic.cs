@@ -31,7 +31,7 @@ namespace TutorialBot.Commands.Slash
 
             [SlashCommand("sendfile", "Sends a file.")]
             [SlashRequireUserPermissions(Permissions.AttachFiles)]
-            [RequireOwner]
+            [SlashRequireOwner]
             public async Task SendFile(InteractionContext ctx, [Option("file", "The file to send.")] DiscordAttachment file)
             {
                 await ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DiscordInteractionResponseBuilder().WithContent("Your image below!"));
