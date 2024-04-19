@@ -5,7 +5,7 @@ using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.SlashCommands;
-using System.Runtime.CompilerServices;
+using DSharpPlus.VoiceNext;
 using TutorialBot.Commands.Prefix;
 using TutorialBot.Commands.Slash;
 using TutorialBot.ConfigHandler;
@@ -18,6 +18,8 @@ namespace TutorialBot
         private static DiscordClient client { get; set; }
         private static CommandsNextExtension commands { get; set; }
         private static SlashCommandsExtension slash { get; set; }
+
+        private static VoiceNextExtension voice { get; set; }
 
 
         public static async Task Main(string[] args)
@@ -74,11 +76,21 @@ namespace TutorialBot
             slash.RegisterCommands<Basic.Utility>();
             slash.RegisterCommands<Moderation>();
             slash.RegisterCommands<PrivateVCCommands>();
+            slash.RegisterCommands<AudioCommands>();
 
             client.UseInteractivity(new InteractivityConfiguration
             {
                 Timeout = TimeSpan.FromMinutes(2)
             });
+
+            var voiceConfiguration = new VoiceNextConfiguration
+            {
+                AudioFormat = AudioFormat.Default,
+                EnableIncoming = false,
+                PacketQueueSize = 50,
+            };
+
+            voice = client.UseVoiceNext(voiceConfiguration);
 
             await client.ConnectAsync();
             await Task.Delay(-1);
