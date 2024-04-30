@@ -42,7 +42,7 @@ namespace TutorialBot
             client = new DiscordClient(clientConfiguration);
 
             client.Ready += Client_Ready;
-            client.ComponentInteractionCreated += Client_Buttom_Interaction_Created;
+            client.ComponentInteractionCreated += Client_Interaction_Created;
 
 
             var commandsConfiguration = new CommandsNextConfiguration
@@ -77,6 +77,7 @@ namespace TutorialBot
             slash.RegisterCommands<Moderation>();
             slash.RegisterCommands<PrivateVCCommands>();
             slash.RegisterCommands<AudioCommands>();
+            slash.RegisterCommands<ComponentCommands>();
 
             client.UseInteractivity(new InteractivityConfiguration
             {
@@ -97,7 +98,7 @@ namespace TutorialBot
 
         }
 
-        private static async Task Client_Buttom_Interaction_Created(DiscordClient sender, ComponentInteractionCreateEventArgs args)
+        private static async Task Client_Interaction_Created(DiscordClient sender, ComponentInteractionCreateEventArgs args)
         {
             switch(args.Interaction.Data.CustomId)
             {
@@ -112,6 +113,24 @@ namespace TutorialBot
                         .AddField("ID", user.Id.ToString(), true)
                         .AddField("Created At", user.CreationTimestamp.ToString(), true);
                     await args.Interaction.CreateResponseAsync(InteractionResponseType.UpdateMessage, new DiscordInteractionResponseBuilder().AddEmbed(embed));
+                    break;
+
+                case "button1":
+                    await args.Interaction.CreateResponseAsync(InteractionResponseType.UpdateMessage, new DiscordInteractionResponseBuilder().WithContent("You clicked the first button!"));
+                    break;
+
+                case "button2":
+                    await args.Interaction.CreateResponseAsync(InteractionResponseType.UpdateMessage, new DiscordInteractionResponseBuilder().WithContent("You clicked the second button!"));
+                    break;
+
+                case "select1":
+                    var selectedOption = args.Interaction.Data.Values[0];
+                    await args.Interaction.CreateResponseAsync(InteractionResponseType.UpdateMessage, new DiscordInteractionResponseBuilder().WithContent($"You selected {selectedOption}!"));
+                    break;
+
+                case "userdropdown1":
+                    var selectedUser = args.Interaction.Data.Values[0];
+                    await args.Interaction.CreateResponseAsync(InteractionResponseType.UpdateMessage, new DiscordInteractionResponseBuilder().WithContent($"You selected {selectedUser}!"));
                     break;
             }
         }
